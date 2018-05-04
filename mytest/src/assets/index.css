@@ -1,0 +1,92 @@
+@charset "utf-8";
+html, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, ol, ul, li, form, table, tbody, tfoot, thead, tr, th, td, dl, dt, dd, fieldset{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, "黑体", simhei, arial, sans-serif;
+}
+html{
+  height:100%;
+  position:relative;
+  font-size:20px;
+}
+body{
+  height: auto;
+  overflow: auto;
+  font-size: .5rem;
+  background: #eee;
+  margin: 0;
+  padding-bottom:2.45rem;
+}
+li{
+  list-style:none;
+}
+img{
+  border:none;
+}
+a{
+  display: inline-block;
+}
+a,span,a:hover,a:active,a:visited,a:link,a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-focus: ignore;
+  outline:none;
+  background: none;
+  text-decoration: none;
+}
+input:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+i{
+  font-style: normal;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.flex{
+  display:flex;
+}
+.color_red{
+  color:#FE4F40;
+}
+.color_dgrey{
+  color:#3D3D3D;
+}
+.color_grey{
+  color:#B0B0B0;
+}
+.color_y{
+  color:#FF8500;
+}
+.font_l{
+  font-size:.6rem;
+}
+.font_xl{
+  font-size:.65rem;
+}
+.font_m{
+  font-size:.7rem;
+}
+.font_xm{
+  font-size:.75rem;
+}
+.font_g{
+  font-size:.8rem;
+}
+.font_xg{
+  font-size:.85rem;
+}
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+.container{
+  text-align: center;
+}
+

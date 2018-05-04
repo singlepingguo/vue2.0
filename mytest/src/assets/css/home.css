@@ -1,0 +1,76 @@
+.header{
+}
+.title{
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s linear infinite;
+  font-size: 1.2rem;
+  padding: 0 .6rem;
+}
+@keyframes masked-animation {
+  0% {
+    background-position: 0  0;
+  }
+  100% {
+    background-position: -100%  0;
+  }
+}
+.photo_album{
+  padding: 0 .6rem;
+}
+.photo_list{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.photo_item{
+  width: 6rem;
+  height: 7.5rem;
+  background: #fff;
+  margin: 0 1.75rem 1rem 1rem;
+  position: relative;
+  background: #f3c697;
+}
+.photo_item:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width:6rem;
+  height: 7.5rem;
+  overflow: hidden;
+  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2), 8px 0 0 -3px #f6f6f6, 9px 0 1px -3px rgba(0, 0, 0, 0.2), 16px 0 0 -6px #f6f6f6, 17px 0 2px -6px rgba(0, 0, 0, 0.2);
+}
+.photo_item .photo_name {
+  height: 4rem;
+  padding: 1.5rem .3rem;
+  box-sizing: border-box;
+}
+.photo_item .photo_describe {
+  position: absolute;
+  bottom: 1.5rem;
+  text-align: left;
+  padding-left: .5rem;
+  color: #9a8f85;
+}
+.photo_item .photo_data {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+}
+.vintage2 {
+  color: transparent;
+  -webkit-text-stroke: .6px #567;
+  letter-spacing: 0.04rem;
+}
+.vintage3 {
+  color: transparent;
+  background-color : blue;
+  text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+  -webkit-background-clip : text;
+}
