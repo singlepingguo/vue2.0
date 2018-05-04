@@ -1,20 +1,22 @@
 <template id="index">
   <div class="container">
+    <div>{{photoId}}</div>
     {{msg}}
-    <Menu v-bind:index="flag"/>
   </div>
 </template>
 
 <script>
-import Menu from '@/components/menu'
 export default {
+  props: ['photoId'],
   name: '',
   data () {
     return {
-      flag: 2,
-      msg: '我是社区'
+      msg: '我是详情'
     }
   },
-  components: {Menu}
+  methods: {
+    // console.log(1234567)
+    // console.log(this.$vm.$route.params)
+  }
 }
 </script>

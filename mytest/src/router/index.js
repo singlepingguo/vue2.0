@@ -4,6 +4,7 @@ import Home from '@/pages/home'
 import Community from '@/pages/community'
 import Omnibus from '@/pages/omnibus'
 import Mine from '@/pages/mine'
+import Detail from '@/pages/detail'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/detail/:photoId',
+      name: 'Detail',
+      component: Detail
     },
     {
       path: '/',

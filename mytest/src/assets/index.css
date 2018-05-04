@@ -89,4 +89,9 @@ i{
 .container{
   text-align: center;
 }
+.block{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
