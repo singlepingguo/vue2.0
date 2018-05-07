@@ -31,7 +31,7 @@ export default new Router({
       component: Mine
     },
     {
-      path: '/detail/:photoId',
+      path: '/detail',
       name: 'Detail',
       component: Detail
     },

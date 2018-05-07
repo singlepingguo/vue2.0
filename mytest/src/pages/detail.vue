@@ -1,22 +1,25 @@
 <template id="index">
-  <div class="container">
-    <div>{{photoId}}</div>
+  <div class="container" :click="loadstart()">
     {{msg}}
+    {{photoId}}
   </div>
 </template>
 
 <script>
 export default {
-  props: ['photoId'],
   name: '',
   data () {
     return {
-      msg: '我是详情'
+      msg: '我是详情',
+      photoId: ''
     }
   },
   methods: {
-    // console.log(1234567)
-    // console.log(this.$vm.$route.params)
+    loadstart: function () {
+      // console.log(this.$route.query)
+      this.photoId = this.$route.query.photoId
+      // console.log(this.photoId)
+    }
   }
 }
 </script>

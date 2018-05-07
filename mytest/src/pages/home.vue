@@ -24,7 +24,8 @@ export default {
     return {
       flag: 1,
       isMore: false,
-      photoList: [{photoId: '0000001', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝'},
+      photoList: [
+        {photoId: '0000001', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝'},
         {photoId: '0000002', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活'},
         {photoId: '0000003', name: '奥林匹克风景', createData: '20140501', classify: '那一抹独到的风景'},
         {photoId: '0000004', name: '奥林匹克风景奥林匹克风景', createData: '20140501', classify: '疏影横斜水清浅'},
@@ -40,15 +41,26 @@ export default {
         {photoId: '0000014', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活'},
         {photoId: '0000015', name: '奥林匹克风景', createData: '20140501', classify: '那一抹独到的风景'},
         {photoId: '0000016', name: '奥林匹克风景奥林匹克风景', createData: '20140501', classify: '疏影横斜水清浅'},
-        {photoId: '0000017', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花'}]
+        {photoId: '0000017', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花'}
+      ],
+      scroll: '',
+      cHeight: document.querySelectorAll("div[class='container']") // 元素高度无法获取
     }
   },
   components: {Menu},
   methods: {
-    gotoDetail: function (photoId) {
+    gotoDetail (photoId) {
       console.log(photoId)
-      this.$router.push({path: '/detail', params: { photoId: photoId }})
+      this.$router.push({ path: '/detail?photoId=' + photoId })
+    },
+    menu () {
+      this.scroll = document.documentElement.scrollTop || document.body.scrollTop
+      console.log(this.scroll)
+      // console.log(this.cHeight.style.height)
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.menu)
   }
 }
 </script>
