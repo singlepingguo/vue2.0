@@ -1,4 +1,4 @@
-<template id="index">
+<template id="">
   <div class="container" :click="loadstart()">
     {{msg}}
     {{photoId}}

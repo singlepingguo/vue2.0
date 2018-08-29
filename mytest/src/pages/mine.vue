@@ -1,6 +1,6 @@
-<template id="index">
+<template id="">
   <div class="container">
-    <router-link to="/topbar">{{msg}}</router-link>
+    <div class="title">个人中心</div>
     <Menu v-bind:index="flag"/>
   </div>
 </template>

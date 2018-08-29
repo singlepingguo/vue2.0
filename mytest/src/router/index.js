@@ -5,6 +5,7 @@ import Community from '@/pages/community'
 import Omnibus from '@/pages/omnibus'
 import Mine from '@/pages/mine'
 import Detail from '@/pages/detail'
+import Edite from '@/pages/edite'
 
 Vue.use(Router)
 
@@ -36,7 +37,12 @@ export default new Router({
       component: Detail
     },
     {
-      path: '/',
+      path: '/edite',
+      name: 'Edite',
+      component: Edite
+    },
+    {
+      path: '/*',
       redirect: '/Home'
     }
   ]

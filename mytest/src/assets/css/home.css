@@ -1,23 +1,60 @@
 .header{
+  width: 100%;
+  height: 4.5rem;
+  z-index: 999;
+  background: #eee;
 }
-.title{
-  height: 2.5rem;
-  line-height: 2.5rem;
-  background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-background-size: 200% 100%;
-  -webkit-animation: masked-animation 4s linear infinite;
-  font-size: 1.2rem;
-  padding: 0 .6rem;
+.search_and_add{
+  padding:0 1rem;
 }
-@keyframes masked-animation {
-  0% {
-    background-position: 0  0;
-  }
-  100% {
-    background-position: -100%  0;
-  }
+.container{
+  margin-bottom:2.45rem;
+}
+.header_fix{
+  position: fixed;
+  top: 0;
+  width: 16.75rem;
+  background: #eee;
+  z-index: 999;
+  padding: 1rem;
+  border-bottom: 2px solid #ADC;
+}
+.search_form{
+  font-size: 0;
+  background: #edc;
+  border: 1px solid #aaa;
+  border-radius: .1rem;
+}
+.search_cont{
+  -webkit-appearance: textarea;
+  outline: none;
+  width: 8rem;
+  height: 1.35rem;
+  padding: 0 .25rem;
+  background: none;
+  border: none;
+}
+.search_btn{
+  height: 1.4rem;
+  line-height:1.35rem;
+  outline: none;
+  background: #fad098;
+  border: none;
+  vertical-align: top;
+  border-left: 1px solid #aaa;
+  border-radius: 0 .2rem .2rem 0;
+}
+.search_and_add .newPhoto{
+  height: 1.45rem;
+  line-height:1.45rem;
+  outline: none;
+  background: #fad098;
+  border: 1px solid #aaa;
+  vertical-align: top;
+  border-radius: .025rem .4rem;
+  padding: 0 .2rem;
+  color: #3d3d3d;
+  font-size: .7rem;
 }
 .photo_album{
   padding: 0 .6rem;
@@ -44,7 +81,7 @@
   width:6rem;
   height: 7.5rem;
   overflow: hidden;
-  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2), 8px 0 0 -3px #f6f6f6, 9px 0 1px -3px rgba(0, 0, 0, 0.2), 16px 0 0 -6px #f6f6f6, 17px 0 2px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 0px rgba(0, 0, 0, 0.2), 8px 0 0 -3px #f6f6f6, 9px 0 1px -3px rgba(0, 0, 0, 0.2), 16px 0 0 -6px #f6f6f6, 17px 0 2px -6px rgba(0, 0, 0, 0.2);
 }
 .photo_item .photo_name {
   height: 4rem;
@@ -73,4 +110,16 @@
   background-color : blue;
   text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
   -webkit-background-clip : text;
+}
+.load_more{
+  width: 4.65rem;
+  height: 1rem;
+  margin: 0 auto;
+  background: url("../img/loading.gif");
+}
+.no_more{
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: .65rem;
+  color: #999;
 }

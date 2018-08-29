@@ -1,0 +1,170 @@
+
+.container{
+  background: url("../img/edite/feather4.png") repeat;
+}
+.photo_form{
+  display: block;
+  width:100%;
+  position: relative;
+  margin-top: 1rem;
+}
+.photo_form:before{
+  content: '';
+  display: block;
+  width:16rem;
+  height:2.45rem;
+  background: #caca7ce6;
+  margin-left: 1rem;
+  border: 1px solid #aaa;
+  border-width: 1px 0px 0 1px;
+  border-radius: 1.6rem 0 0 0;
+  position: relative;
+  z-index: 2;
+}
+.border_little{
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  width: 1.45rem;
+  height: 2.45rem;
+  background: #c8c88d4d;
+  border-radius: 4rem 0 0 0;
+  border: 1px solid #aaa;
+  border-width: 1px 0 0 1px;
+  box-shadow: 0.05rem 0.05rem 0.05rem 0 rgba(0,0,0,.2) inset;
+  z-index: 2;
+}
+.border_big{
+  position: absolute;
+  top: 0;
+  right: .2rem;
+  width: 2.2rem;
+  height: 2.5rem;
+  background: #c8c88de6;
+  border-radius: 2rem 2rem 2rem 0;
+  z-index: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0px 0.15rem 0.3rem #999;
+}
+.edite_box{
+  position: relative;
+  z-index: 2;
+  width: 15rem;
+  margin-left: 1rem;
+  height: auto;
+  background: rgba(237,237,145,.8);
+  border: 1px solid #aaa;
+  box-shadow: 0.05rem 0.2rem 0.3em 0 #999;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 .5rem .5rem;
+}
+.edite_item{
+  line-height: 2rem;
+  font-size: .7rem;
+  text-align: left;
+}
+.edite_item_name{
+  margin-right: .3rem;
+  width: 4.5rem;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  font-size: .7rem;
+}
+.edite_item_input{
+  outline: none;
+  height: 1.25rem;
+  padding-left: .2rem;
+  border-radius: .5rem;
+  border: .05rem solid #888;
+}
+.edite_item_text{
+  height: 3rem;
+  border-radius: .15rem;
+  width: 8.4rem;
+  margin-top: .5rem;
+  padding: .2rem;
+  outline: none;
+}
+.radio_box{
+  padding-left: .8rem;
+}
+.radio_box input{
+  vertical-align: text-top;
+}
+.labels{
+  line-height: 1.65rem;
+  font-size: .6rem;
+}
+.labels_box {
+  width: 10rem;
+}
+.label_item{
+  border: 1px solid #aaa;
+  padding: 0rem 0.3rem;
+  margin: 0 .4rem .2rem 0;
+  display: inline-block;
+  line-height: .9rem;
+  color: #999;
+}
+.label_item.on{
+  border: 1px solid #fe9f25;
+  color: #fe9f25;
+}
+.labels_control{
+  width: 10.25rem;
+  position: relative;
+}
+.labels_control span{
+  display: inline-block;
+  color: #fff;
+  line-height: 1.25rem;
+  width: 2.2rem;
+  text-align: center;
+  border-radius: .15rem;
+  margin-right: .5rem;
+}
+.labels_control .finished{
+  position: absolute;
+  right: .58rem;
+  bottom: .25rem;
+  background: #bdb8dc;
+  height: 1.2rem;
+}
+.labels_control .label_add{
+  background: #97feb0;
+}
+.labels_control .label_del{
+  background: #fe9976;
+}
+.labels_control .label_edite{
+  background: #fecb61;
+}
+.label_input{
+  width: 9rem;
+  height: 1rem;
+  outline: none;
+}
+.finished{
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+.save_btns{
+  height: 3rem;
+  line-height: 3rem;
+}
+.save_btn{
+  background: #5cc1ab;
+  padding: .2rem .5rem;
+  border-radius: .25rem;
+  color: #fff;
+  font-size: .75rem;
+  margin: 0 .85rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0rem #888;
+  border: none;
+  outline: none;
+}
+span.save_btn{
+  padding: .28rem .5rem;
+}

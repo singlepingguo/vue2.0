@@ -1,4 +1,4 @@
-<template id="index">
+<template id="">
   <div class="container">
     <router-link to="/topbar">{{msg}}</router-link>
     <Menu v-bind:index="flag"/>
