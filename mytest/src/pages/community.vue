@@ -1,6 +1,6 @@
 <template id="">
   <div class="container">
-    <div class='title'>{{msg}}</div>
+    {{msg}}
     <Menu v-bind:index="flag"/>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       flag: 2,
-      msg: '社区'
+      msg: '我是社区'
     }
   },
   components: {Menu}
