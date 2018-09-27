@@ -1,7 +1,7 @@
 <template id="">
   <div class="container">
     <div class="header">
-      <div class="title font_m"><p>我的相册</p></div>
+      <div class="title font_m">我的相册</div>
       <div :class="{'header_fix':headerClass}" class="search_and_add clearfix">
         <iframe name="search_iframe" style="display:none;"></iframe>
         <form class="fl search_form" action="SearchPhoto" target="search_iframe">
@@ -14,7 +14,7 @@
     <div class="photo_album" ref="photoAlbum">
       <ul class="photo_list clearfix color_grey">
         <li class="photo_item" v-for="photo in photoList" v-bind:key="photo.key" :photoId="photo.photoId"
-            @click="gotoDetail(photo.photoId)">
+            @click="gotoDetail(photo)">
           <p class="photo_name font_g color_dgrey vintage2">{{photo.name}}</p>
           <p class="photo_describe">{{photo.classify}}</p>
           <p class="photo_data">{{photo.createData}}</p>
@@ -38,15 +38,15 @@ export default {
       noMore: false,
       pageIndex: 0,
       photoList: [
-        {photoId: '0000001', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝'},
-        {photoId: '0000002', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活'},
-        {photoId: '0000003', name: '奥林匹克风景', createData: '20140501', classify: '那一抹独到的风景'},
-        {photoId: '0000004', name: '奥林匹克风景奥林匹克风景', createData: '20140501', classify: '疏影横斜水清浅'},
-        {photoId: '0000005', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活'},
-        {photoId: '0000017', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花'},
-        {photoId: '0000022', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝'},
-        {photoId: '0000006', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活'},
-        {photoId: '0000014', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花'}
+        {photoId: '0000001', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝', page: 5},
+        {photoId: '0000002', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活', page: 9},
+        {photoId: '0000003', name: '奥林匹克风景', createData: '20140501', classify: '那一抹独到的风景', page: 3},
+        {photoId: '0000004', name: '奥林匹克风景奥林匹克风景', createData: '20140501', classify: '疏影横斜水清浅', page: 7},
+        {photoId: '0000005', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活', page: 6},
+        {photoId: '0000017', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花', page: 35},
+        {photoId: '0000022', name: '风景', createData: '20180302', classify: '日出江花红胜火,春来江水绿如蓝', page: 8},
+        {photoId: '0000006', name: '通州生活', createData: '20170312', classify: '点点滴滴构成了生活', page: 20},
+        {photoId: '0000014', name: '南方之旅', createData: '20180624', classify: '停车坐爱枫林晚,霜叶红于二月花', page: 15}
       ],
       scroll: '',
       cHeight: '',
@@ -56,9 +56,14 @@ export default {
   },
   components: {Menu},
   methods: {
-    gotoDetail (photoId) {
-      console.log(photoId)
-      this.$router.push({path: '/detail?photoId=' + photoId})
+    gotoDetail (photo) {
+      console.log(JSON.stringify(photo))
+      console.log(event.currentTarget)
+      console.log(event.target)
+      event.currentTarget.classList.add('click')
+      this.timeOut = setTimeout(() => {
+        this.$router.push({path: '/detail?photo=' + JSON.stringify(photo)})
+      }, 800)
     },
     Scroll () {
       this.scroll = document.documentElement.scrollTop || document.body.scrollTop
@@ -98,6 +103,9 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.Scroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.Scroll)
   }
 }
 </script>
