@@ -1,6 +1,5 @@
 <template id="">
   <div class="container">
-    <div class="title">个人中心</div>
     <div class='mine-header'>
       <div>
         <span class='fr sign'>签到</span>

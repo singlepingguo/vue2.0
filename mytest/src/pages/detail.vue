@@ -9,7 +9,7 @@
       </div>
       <ul :class="{photo_pages:true,on:open}">
         <li class="photo_page" :class="{turn_page:index>n,turn_left:index>n,current:index==n}" :style="{'z-index':index>=n?999:999-n}" v-bind:data-pageOpen="0" v-for="n in photo.page" v-bind:key="n"  @click="changePage(n)">
-          <img src="../assets/img/edite/feather4.png"/>
+          <img :src="'/static/detail/'+n+'.jpg'"/>
           <div class="foot_page">第{{n}}页</div>
         </li>
       </ul>
